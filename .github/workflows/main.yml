@@ -4,7 +4,7 @@ name: Deploy to Alibaba ECS
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   workflow_dispatch:
 
 jobs:
@@ -13,25 +13,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Install Node Js
-      uses: actions/setup-node@v4.0.2
-      with:
-        node-version: 20.10.0
-    - name: Install Npm Deps
-      uses: actions/setup-node@v4.0.2
-      with:
-        node-version: 20.10.0
-    - name: Install Npm Deps
-      run: npm install
-    - name: Build App
-      run: npm run build
-    - name: Copy Dist File With SCP
-      uses: appleboy/scp-action@v0.0.1
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        KEY: ${{ secrets.SCP_SECRET }}
-        SOURCE: 'dist/'
-        TARGET: ${{ secrets.REMOTE_TARGET_PATH }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Node Js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20.10.0
+      - name: Install Npm Deps
+        run: npm install
+      - name: Build App
+        run: npm run build
+      - name: Copy Dist File With SCP
+        uses: appleboy/scp-action@v0.0.1
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          KEY: ${{ secrets.SCP_SECRET }}
+          SOURCE: 'dist/'
+          TARGET: ${{ secrets.REMOTE_TARGET_PATH }}
