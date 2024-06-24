@@ -1,9 +1,9 @@
-import React from "react"
-import Image from "../assets/avatar.svg"
-import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa"
-import { TypeAnimation } from "react-type-animation"
-import { motion } from "framer-motion"
-import { fadeIn } from "../variants"
+import React from 'react'
+import Image from '../assets/avatar.svg'
+import { FaGithub, FaYoutube, FaDribbble } from 'react-icons/fa'
+import { TypeAnimation } from 'react-type-animation'
+import { motion } from 'framer-motion'
+import { fadeIn } from '../variants'
 
 const Banner = () => {
   return (
@@ -15,16 +15,16 @@ const Banner = () => {
         <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
           <div className="flex-1 text-center font-secondary lg:text-left">
             <motion.h1
-              variants={fadeIn("up", 0.3)}
+              variants={fadeIn('up', 0.3)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.7 }}
               className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
             >
-              BEN <span>AIDEN</span>
+              This <span>XJJ</span>
             </motion.h1>
             <motion.div
-              variants={fadeIn("up", 0.4)}
+              variants={fadeIn('up', 0.4)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.7 }}
@@ -32,7 +32,7 @@ const Banner = () => {
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
-                sequence={["Developer", 2000, "Coder", 2000, "Designer", 2000]}
+                sequence={['Developer', 2000, 'Coder', 2000, 'Designer', 2000]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
@@ -40,7 +40,7 @@ const Banner = () => {
               />
             </motion.div>
             <motion.p
-              variants={fadeIn("up", 0.5)}
+              variants={fadeIn('up', 0.5)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.7 }}
@@ -50,7 +50,7 @@ const Banner = () => {
               earum debitis adipisci quod explicabo?
             </motion.p>
             <motion.div
-              variants={fadeIn("up", 0.6)}
+              variants={fadeIn('up', 0.6)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.7 }}
@@ -62,7 +62,7 @@ const Banner = () => {
               </a>
             </motion.div>
             <motion.div
-              variants={fadeIn("up", 0.7)}
+              variants={fadeIn('up', 0.7)}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.7 }}
@@ -80,7 +80,7 @@ const Banner = () => {
             </motion.div>
           </div>
           <motion.div
-            variants={fadeIn("down", 0.7)}
+            variants={fadeIn('down', 0.7)}
             initial="hidden"
             whileInView="show"
             className="hidden lg:flex flex-1 lg:max-w-[382px] xl:max-w-[482px]"
